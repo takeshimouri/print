@@ -49,7 +49,7 @@ const Global = createGlobalStyle`
       background: #FFFFFF;
       /*
       */
-      padding: 15.0mm;
+      padding: 13.0mm 15.0mm 15.0mm 15.0mm;
     }
   }
   
@@ -101,29 +101,109 @@ const data =
     "cdcstm": 23232323,
     "nmcstm": "毛利　竹志",
     "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9"
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
   },
   {
     "id": 2,
     "cdcstm": 24242424,
     "nmcstm": "毛利　竹志2",
     "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9"
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
   },
-  // {
-  //   "id": 3,
-  //   "cdcstm": 25252525,
-  //   "nmcstm": "毛利　竹志3",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9"
-  // },
-  // {
-  //   "id": 4,
-  //   "cdcstm": 26262626,
-  //   "nmcstm": "毛利　竹志4",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9"
-  // }
+  {
+    "id": 3,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志3",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 4,
+    "cdcstm": 26262626,
+    "nmcstm": "毛利　竹志4",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 5,
+    "cdcstm": 23232323,
+    "nmcstm": "毛利　竹志",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 6,
+    "cdcstm": 24242424,
+    "nmcstm": "毛利　竹志2",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 7,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志3",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 8,
+    "cdcstm": 26262626,
+    "nmcstm": "毛利　竹志4",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 9,
+    "cdcstm": 23232323,
+    "nmcstm": "毛利　竹志",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 10,
+    "cdcstm": 24242424,
+    "nmcstm": "毛利　竹志2",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 11,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志3",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 12,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志3",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
 ]
 
 const Sheet = () => {
@@ -131,19 +211,23 @@ const Sheet = () => {
     <div className="sheet padding-19.5mm"
     style={{
           display: "flex",
+          flexWrap: "wrap",
           flexDirection: "row"
     }}>
       {data.map(c => (
         <div style={{
-          width: "91.3mm",
-          height: "38.5mm",
-          borderStyle: "solid",
+          // width: "91.3mm",
+          fontSize: "14px",
+          width: "40%",
+          height: "29mm",
+          // height: "16.666%",
+          // borderStyle: "solid",
           borderWidth: "2px",
           borderColor: "#CCCCCC",
           // background: "#C0C0C0",
-          padding: "3mm 8mm 3mm 8mm"
+          padding: "5mm 8mm 8mm 8mm"
         }}>
-        {data ? c.postalcode : 'データがありません'}
+        〒 {data ? c.postalcode : 'データがありません'}
         <br />
         {data ? c.addr1 : 'データがありません'}
         <br />
@@ -151,7 +235,10 @@ const Sheet = () => {
         <br />
         <br />
           <div style={{textAlign: "right", marginRight: "3px"}}>
-            {data ? c.cdcstm : 'データがありません'}
+            契約期間 {data ? c.kyYmkiyk :'データがありません'}〜
+            {data ? c.kyYmkiye :'データがありません'}
+            <br />
+            読者No. {data ? c.cdcstm : 'データがありません'}
           </div>
         </div>
       ))}
