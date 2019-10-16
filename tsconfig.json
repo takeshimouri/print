@@ -19,6 +19,9 @@
     "noEmit": true,
     "jsx": "react"
   },
+  "files": [
+    "logic.ts"
+  ],
   "include": [
     "src"
   ]
