@@ -49,7 +49,7 @@ const Global = createGlobalStyle`
       background: #FFFFFF;
       /*
       */
-      padding: 18.2mm;
+      padding: 15.0mm;
     }
   }
   
@@ -136,7 +136,7 @@ const Sheet = () => {
       {data.map(c => (
         <div style={{
           width: "91.3mm",
-          height: "35.3mm",
+          height: "38.5mm",
           borderStyle: "solid",
           borderWidth: "2px",
           borderColor: "#CCCCCC",
