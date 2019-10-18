@@ -49,7 +49,7 @@ const Global = createGlobalStyle`
       background: #FFFFFF;
       /*
       */
-      padding: 13.0mm 15.0mm 15.0mm 15.0mm;
+      padding: 16.0mm 15.0mm 15.0mm 17.0mm;
     }
   }
   
@@ -135,7 +135,7 @@ const data =
   {
     "id": 5,
     "cdcstm": 23232323,
-    "nmcstm": "毛利　竹志",
+    "nmcstm": "毛利　竹志5",
     "postalcode": "150-0001",
     "addr1": "東京都渋谷区神宮前4-24-9",
     "kyYmkiyk": "2019年1月号",
@@ -144,7 +144,7 @@ const data =
   {
     "id": 6,
     "cdcstm": 24242424,
-    "nmcstm": "毛利　竹志2",
+    "nmcstm": "毛利　竹志6",
     "postalcode": "150-0001",
     "addr1": "東京都渋谷区神宮前4-24-9",
     "kyYmkiyk": "2019年1月号",
@@ -153,57 +153,66 @@ const data =
   {
     "id": 7,
     "cdcstm": 25252525,
-    "nmcstm": "毛利　竹志3",
+    "nmcstm": "毛利　竹志7",
     "postalcode": "150-0001",
     "addr1": "東京都渋谷区神宮前4-24-9",
     "kyYmkiyk": "2019年1月号",
     "kyYmkiye": "2019年12月号"
   },
-  {
-    "id": 8,
-    "cdcstm": 26262626,
-    "nmcstm": "毛利　竹志4",
-    "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9",
-    "kyYmkiyk": "2019年1月号",
-    "kyYmkiye": "2019年12月号"
-  },
-  {
-    "id": 9,
-    "cdcstm": 23232323,
-    "nmcstm": "毛利　竹志",
-    "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9",
-    "kyYmkiyk": "2019年1月号",
-    "kyYmkiye": "2019年12月号"
-  },
-  {
-    "id": 10,
-    "cdcstm": 24242424,
-    "nmcstm": "毛利　竹志2",
-    "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9",
-    "kyYmkiyk": "2019年1月号",
-    "kyYmkiye": "2019年12月号"
-  },
-  {
-    "id": 11,
-    "cdcstm": 25252525,
-    "nmcstm": "毛利　竹志3",
-    "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9",
-    "kyYmkiyk": "2019年1月号",
-    "kyYmkiye": "2019年12月号"
-  },
-  {
-    "id": 12,
-    "cdcstm": 25252525,
-    "nmcstm": "毛利　竹志3",
-    "postalcode": "150-0001",
-    "addr1": "東京都渋谷区神宮前4-24-9",
-    "kyYmkiyk": "2019年1月号",
-    "kyYmkiye": "2019年12月号"
-  },
+  // {
+  //   "id": 8,
+  //   "cdcstm": 26262626,
+  //   "nmcstm": "毛利　竹志8",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
+  // {
+  //   "id": 9,
+  //   "cdcstm": 23232323,
+  //   "nmcstm": "毛利　竹志9",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
+  // {
+  //   "id": 10,
+  //   "cdcstm": 24242424,
+  //   "nmcstm": "毛利　竹志10",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
+  // {
+  //   "id": 11,
+  //   "cdcstm": 25252525,
+  //   "nmcstm": "毛利　竹志11",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
+  // {
+  //   "id": 12,
+  //   "cdcstm": 25252525,
+  //   "nmcstm": "毛利　竹志12",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
+  // {
+  //   "id": 13,
+  //   "cdcstm": 25252525,
+  //   "nmcstm": "毛利　竹志13",
+  //   "postalcode": "150-0001",
+  //   "addr1": "東京都渋谷区神宮前4-24-9",
+  //   "kyYmkiyk": "2019年1月号",
+  //   "kyYmkiye": "2019年12月号"
+  // },
 ]
 
 const Sheet = () => {
@@ -212,19 +221,16 @@ const Sheet = () => {
     style={{
           display: "flex",
           flexWrap: "wrap",
-          flexDirection: "row"
+          alignContent: "flex-start"
     }}>
       {data.map(c => (
         <div style={{
-          // width: "91.3mm",
           fontSize: "14px",
           width: "40%",
-          height: "29mm",
-          // height: "16.666%",
+          height: "30.5mm",
           // borderStyle: "solid",
           borderWidth: "2px",
           borderColor: "#CCCCCC",
-          // background: "#C0C0C0",
           padding: "5mm 8mm 8mm 8mm"
         }}>
         〒 {data ? c.postalcode : 'データがありません'}
