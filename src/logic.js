@@ -87,6 +87,8 @@ const documentDefinitions = {
     image: dataUrl,
     ...contentSize
     },
+    text: 'borderAdd',
+    pageBreak: 'after',
     pageMargins
 };
 

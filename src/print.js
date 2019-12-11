@@ -2,6 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { createPdfFromHtml } from "./logic";
 
+
 const Global = createGlobalStyle`
   /* paper.css */
   https://github.com/cognitom/paper-css
@@ -17,6 +18,9 @@ const Global = createGlobalStyle`
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
+    page-break-after: always;
+  }
+  .pageBreak {
     page-break-after: always;
   }
   
@@ -62,6 +66,7 @@ const Global = createGlobalStyle`
     #print.letter, #print.legal    { width: 216mm }
     #print.letter.landscape        { width: 280mm }
     #print.legal.landscape         { width: 357mm }
+    /** #content                       { page-break-after: always !important } **/
   }
 `;
 
@@ -75,6 +80,7 @@ export class PrintPage extends React.Component {
         <div id="print" className="A4">
           <Sheet />
           <div 
+          // style={{ position: "fixed", top: "200vh" }}
           style={{ position: "fixed", top: "200vh" }}
           >
             <div
@@ -159,95 +165,124 @@ const data =
     "kyYmkiyk": "2019年1月号",
     "kyYmkiye": "2019年12月号"
   },
-  // {
-  //   "id": 8,
-  //   "cdcstm": 26262626,
-  //   "nmcstm": "毛利　竹志8",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
-  // {
-  //   "id": 9,
-  //   "cdcstm": 23232323,
-  //   "nmcstm": "毛利　竹志9",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
-  // {
-  //   "id": 10,
-  //   "cdcstm": 24242424,
-  //   "nmcstm": "毛利　竹志10",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
-  // {
-  //   "id": 11,
-  //   "cdcstm": 25252525,
-  //   "nmcstm": "毛利　竹志11",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
-  // {
-  //   "id": 12,
-  //   "cdcstm": 25252525,
-  //   "nmcstm": "毛利　竹志12",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
-  // {
-  //   "id": 13,
-  //   "cdcstm": 25252525,
-  //   "nmcstm": "毛利　竹志13",
-  //   "postalcode": "150-0001",
-  //   "addr1": "東京都渋谷区神宮前4-24-9",
-  //   "kyYmkiyk": "2019年1月号",
-  //   "kyYmkiye": "2019年12月号"
-  // },
+  {
+    "id": 8,
+    "cdcstm": 26262626,
+    "nmcstm": "毛利　竹志8",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 9,
+    "cdcstm": 23232323,
+    "nmcstm": "毛利　竹志9",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 10,
+    "cdcstm": 24242424,
+    "nmcstm": "毛利　竹志10",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 11,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志11",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 12,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志12",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
+  {
+    "id": 13,
+    "cdcstm": 25252525,
+    "nmcstm": "毛利　竹志13",
+    "postalcode": "150-0001",
+    "addr1": "東京都渋谷区神宮前4-24-9",
+    "kyYmkiyk": "2019年1月号",
+    "kyYmkiye": "2019年12月号"
+  },
 ]
 
 const Sheet = () => {
   return (
-    <div className="sheet padding-19.5mm"
+    <section className="sheet padding-19.5mm" id="content"
     style={{
           display: "flex",
           flexWrap: "wrap",
-          alignContent: "flex-start"
+          alignContent: "flex-start",
+          pageBreakAfter: 'always',
     }}>
       {data.map(c => (
-        <div style={{
+        <section className="pageBreak" style={{
           fontSize: "14px",
           width: "40%",
           height: "30.5mm",
+          pageBreakAfter: 'always',
           // borderStyle: "solid",
-          borderWidth: "2px",
-          borderColor: "#CCCCCC",
-          padding: "5mm 8mm 8mm 8mm"
+          // borderWidth: "2px",
+          // borderColor: "#CCCCCC",
+          padding: "5mm 8mm 8mm 8mm",
         }}>
-        〒 {data ? c.postalcode : 'データがありません'}
-        <br />
-        {data ? c.addr1 : 'データがありません'}
-        <br />
-        {data ? c.nmcstm : 'データがありません'}
-        <br />
-        <br />
-          <div style={{textAlign: "right", marginRight: "3px"}}>
-            契約期間 {data ? c.kyYmkiyk :'データがありません'}〜
-            {data ? c.kyYmkiye :'データがありません'}
-            <br />
-            読者No. {data ? c.cdcstm : 'データがありません'}
-          </div>
-        </div>
+
+          {c.id%12 ===1 
+            ? 
+            < section style={{
+              display: "block",
+              pageBreakAfter: 'always',
+              borderStyle: "solid",
+              borderWidth: "2px",
+              borderColor: "#CCCCCC",
+          }}
+            />
+            : ''}
+            {c.id%13 ===1 
+              ? 
+              < section style={{
+                display: "block",
+                pageBreakBefore: 'always',
+                borderStyle: "solid",
+                borderWidth: "2px",
+                borderColor: "#CCCCCC",
+            }}
+              />
+              : ''}
+  
+             〒
+             {data ? c.postalcode : 'データがありません'}
+            < div style={{ pageBreak: "after"}}
+            />
+             <br />
+             {data ? c.addr1 : 'データがありません'}
+             <br />
+             {data ? c.nmcstm : 'データがありません'}
+             <br />
+             <br />
+               <div style={{textAlign: "right", marginRight: "3px"}}>
+                 契約期間 {data ? c.kyYmkiyk :'データがありません'}〜
+                 {data ? c.kyYmkiye :'データがありません'}
+                 <br />
+                 読者No. {data ? c.cdcstm : 'データがありません'}
+               </div>
+          </ section>
       ))}
-    </div>
+    </section>
   );
 };
